@@ -1,4 +1,6 @@
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
+import { Icon } from '@iconify/react';
+import Settings from '@iconify/icons-eva/settings-2-fill';
 // material
 import { styled } from '@material-ui/core/styles';
 import { Box, Button, AppBar, Toolbar, Container } from '@material-ui/core';
@@ -12,6 +14,7 @@ import { MHidden } from '../../components/@material-extend';
 import MenuDesktop from './MenuDesktop';
 import MenuMobile from './MenuMobile';
 import navConfig from './MenuConfig';
+import { PATH_DASHBOARD } from '../../routes/paths';
 
 // ----------------------------------------------------------------------
 
@@ -80,9 +83,19 @@ export default function MainNavbar() {
             <MenuDesktop isOffset={isOffset} isHome={isHome} navConfig={navConfig} />
           </MHidden>
 
-          <Button variant="contained" target="_blank" href="https://material-ui.com/store/items/minimal-dashboard/">
-            Purchase Now
+          <Button
+            size="small"
+            variant="contained"
+            component={RouterLink}
+            to={PATH_DASHBOARD.root}
+            startIcon={<Icon icon={Settings} width={15} height={15} />}
+          >
+            Dashboard
           </Button>
+
+          {/* <RouterLink to={PATH_DASHBOARD.root}>
+            <Button variant="contained">Dashboard</Button>
+          </RouterLink> */}
 
           <MHidden width="mdUp">
             <MenuMobile isOffset={isOffset} isHome={isHome} navConfig={navConfig} />

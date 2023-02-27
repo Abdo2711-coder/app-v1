@@ -199,7 +199,7 @@ export default function LandingPricingPlans() {
               <Button
                 size="large"
                 variant="contained"
-                href="mailto:support@minimals.cc?subject=[Feedback] from Customer"
+                href="mailto:abdelrahmandiv@gmail.com?subject=[Feedback] from Customer"
               >
                 Contact us
               </Button>

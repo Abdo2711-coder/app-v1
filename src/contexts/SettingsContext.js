@@ -102,7 +102,7 @@ function SetColor(themeColor) {
 
 const initialState = {
   themeMode: 'light',
-  themeDirection: 'ltr',
+  themeDirection: 'rtl',
   themeColor: 'default',
   themeStretch: false,
   onChangeMode: () => {},
@@ -134,10 +134,10 @@ function SettingsProvider({ children }) {
     });
   };
 
-  const onChangeDirection = (event) => {
+  const onChangeDirection = (event = null, direct = null) => {
     setSettings({
       ...settings,
-      themeDirection: event.target.value
+      themeDirection: direct || event.target.value
     });
   };
 

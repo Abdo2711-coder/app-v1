@@ -4,6 +4,7 @@ import { alpha } from '@material-ui/core/styles';
 import { Box, MenuItem, ListItemIcon, ListItemText } from '@material-ui/core';
 // hooks
 import useLocales from '../../hooks/useLocales';
+import useSettings from '../../hooks/useSettings';
 // components
 import MenuPopover from '../../components/MenuPopover';
 import { MIconButton } from '../../components/@material-extend';
@@ -14,6 +15,7 @@ export default function LanguagePopover() {
   const anchorRef = useRef(null);
   const [open, setOpen] = useState(false);
   const { allLang, currentLang, onChangeLang } = useLocales();
+  const { themeDirection, onChangeDirection } = useSettings();
 
   const handleOpen = () => {
     setOpen(true);
@@ -26,6 +28,11 @@ export default function LanguagePopover() {
   const handleChangeLang = (value) => {
     onChangeLang(value);
     handleClose();
+    if (value === 'ar' && themeDirection !== 'rtl') {
+      onChangeDirection(null, 'rtl');
+    } else {
+      onChangeDirection(null, 'ltr');
+    }
   };
 
   return (
