@@ -14,7 +14,7 @@ const users = [
   {
     id: '8864c717-587d-472a-929a-8e5f298024da-0',
     displayName: 'Jaydon Frankie',
-    email: 'demo@minimals.cc',
+    email: 'abdelrahmandiv@gmail.com',
     password: 'demo1234',
     photoURL: '/static/mock-images/avatars/avatar_default.jpg',
     phoneNumber: '+40 777666555',

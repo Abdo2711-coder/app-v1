@@ -35,7 +35,7 @@ export default function UserCards() {
   }, [dispatch]);
 
   return (
-    <Page title="User: Cards | Minimal-UI">
+    <Page title="User: Cards | Easier">
       <Container maxWidth={themeStretch ? false : 'lg'}>
         <HeaderBreadcrumbs
           heading="User Cards"

@@ -25,7 +25,7 @@ export default function Chat() {
   }, [dispatch]);
 
   return (
-    <Page title="Chat | Minimal-UI">
+    <Page title="Chat | Easier">
       <Container maxWidth={themeStretch ? false : 'xl'}>
         <HeaderBreadcrumbs
           heading="Chat"

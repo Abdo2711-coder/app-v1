@@ -18,7 +18,7 @@ const RootStyle = styled(Page)(({ theme }) => ({
 
 export default function Faqs() {
   return (
-    <RootStyle title="Faqs | Minimal-UI">
+    <RootStyle title="Faqs | Easier">
       <FaqsHero />
 
       <Container sx={{ mt: 15, mb: 10 }}>

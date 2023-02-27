@@ -148,7 +148,7 @@ export default function UserList() {
   const isUserNotFound = filteredUsers.length === 0;
 
   return (
-    <Page title="User: List | Minimal-UI">
+    <Page title="User: List | Easier">
       <Container maxWidth={themeStretch ? false : 'lg'}>
         <HeaderBreadcrumbs
           heading="User List"
